@@ -14,6 +14,7 @@
 		0E5B5B59289EAA9900153790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B5B57289EAA9900153790 /* LaunchScreen.storyboard */; };
 		0E5B5B62289EAAE400153790 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 0E5B5B61289EAAE400153790 /* SpringAnimation */; };
 		0E5B5B65289ECA6C00153790 /* SpringAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B5B64289ECA6C00153790 /* SpringAnimationViewController.swift */; };
+		0E76F4AB28A032C00003F0B1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76F4AA28A032C00003F0B1 /* DataStore.swift */; };
 		0EC55911289ED8A000802C0A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC55910289ED8A000802C0A /* Animation.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		0E5B5B58289EAA9900153790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E5B5B5A289EAA9900153790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5B5B64289ECA6C00153790 /* SpringAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationViewController.swift; sourceTree = "<group>"; };
+		0E76F4AA28A032C00003F0B1 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		0EC55910289ED8A000802C0A /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		0E5B5B4B289EAA9800153790 /* SpringAppHW */ = {
 			isa = PBXGroup;
 			children = (
+				0E76F4A928A032AA0003F0B1 /* DataStore */,
 				0EC5590F289ED7A900802C0A /* Models */,
 				0E5B5B66289ED52200153790 /* App */,
 				0E5B5B68289ED58D00153790 /* Storyboards */,
@@ -94,6 +97,14 @@
 				0E5B5B52289EAA9800153790 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E76F4A928A032AA0003F0B1 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				0E76F4AA28A032C00003F0B1 /* DataStore.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		0EC5590F289ED7A900802C0A /* Models */ = {
@@ -184,6 +195,7 @@
 				0E5B5B4D289EAA9800153790 /* AppDelegate.swift in Sources */,
 				0E5B5B65289ECA6C00153790 /* SpringAnimationViewController.swift in Sources */,
 				0EC55911289ED8A000802C0A /* Animation.swift in Sources */,
+				0E76F4AB28A032C00003F0B1 /* DataStore.swift in Sources */,
 				0E5B5B4F289EAA9800153790 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

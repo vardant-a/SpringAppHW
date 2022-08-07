@@ -6,15 +6,14 @@
 //
 
 import Foundation
-import SpringAnimation
 
 struct Animation {
     
-    var preset: String
-    var curve: String
-    var force: Float
-    var duration: Float
-    var delay: Float
+    let preset: String
+    let curve: String
+    let force: Double
+    let duration: Double
+    let delay: Double
     
     var info: String {
     """
@@ -28,11 +27,11 @@ struct Animation {
 
     static func getRandomAnimation() -> Animation {
         Animation(
-            preset: AnimationPreset.allCases.randomElement()?.rawValue ?? "",
-            curve: AnimationCurve.allCases.randomElement()?.rawValue ?? "",
-            force: Float.random(in: 1...2),
-            duration: Float.random(in: 1...2),
-            delay: Float.random(in: 1...2)
+            preset: DataStore.shired.animPreset.randomElement()?.rawValue ?? "",
+            curve: DataStore.shired.animCurve.randomElement()?.rawValue ?? "",
+            force: Double.random(in: 1...2),
+            duration: Double.random(in: 1.2..<1.5),
+            delay: Double.random(in: 0.1..<0.5)
         )
     }
 }

@@ -11,37 +11,24 @@ import SpringAnimation
 class SpringAnimationViewController: UIViewController {
     
     @IBOutlet var animatedView: SpringView!
-    @IBOutlet var codeTextView: UITextView!
     @IBOutlet var startAnimationButton: UIButton!
-    
-    var animation = Animation.getRandomAnimation()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        animatedView.layer.cornerRadius = 15
-        codeTextView.text = animation.info
+    @IBOutlet var animationPropertiesLabel: UILabel! {
+        didSet {
+            animationPropertiesLabel.text = animation.info
+        }
     }
+    
+    private var animation = Animation.getRandomAnimation()
     
     @IBAction func startAnimation() {
-        animationProperties()
-        codeTextView.text = animation.info
-        animatedView.animate()
-        nextAnimationProperties()
-    }
-}
-
-extension SpringAnimationViewController {
-    
-    private func animationProperties() {
         animatedView.animation = animation.preset
         animatedView.curve = animation.curve
-        animatedView.force = CGFloat(animation.force)
-        animatedView.duration = CGFloat(animation.duration)
-        animatedView.delay = CGFloat(animation.delay)
-    }
-    
-    private func nextAnimationProperties() {
+        animatedView.force = animation.force
+        animatedView.duration = animation.duration
+        animatedView.delay = animation.delay
+        animatedView.animate()
+        animationPropertiesLabel.text = animation.info
+        
         animation = Animation.getRandomAnimation()
         startAnimationButton.setTitle("Run \(animation.preset)", for: .normal)
     }

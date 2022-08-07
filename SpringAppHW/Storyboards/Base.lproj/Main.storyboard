@@ -19,26 +19,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-So-u6l" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="38" y="50" width="299" height="180"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Set" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Deu-zK-8dw">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="180"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-XG-vAO">
+                                        <rect key="frame" x="16" y="20" width="267" height="140"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Deu-zK-8dw" secondAttribute="bottom" id="5Jy-cM-Nix"/>
+                                    <constraint firstAttribute="bottom" secondItem="eVd-XG-vAO" secondAttribute="bottom" constant="20" id="0ut-kk-8bw"/>
                                     <constraint firstAttribute="height" constant="180" id="CUb-Vl-VHp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Deu-zK-8dw" secondAttribute="trailing" id="D8g-4B-q96"/>
-                                    <constraint firstItem="Deu-zK-8dw" firstAttribute="top" secondItem="bzV-So-u6l" secondAttribute="top" id="TF8-dF-Ug2"/>
-                                    <constraint firstItem="Deu-zK-8dw" firstAttribute="leading" secondItem="bzV-So-u6l" secondAttribute="leading" id="tnm-KZ-hg8"/>
+                                    <constraint firstItem="eVd-XG-vAO" firstAttribute="leading" secondItem="bzV-So-u6l" secondAttribute="leading" constant="16" id="Tso-x5-PEW"/>
+                                    <constraint firstAttribute="trailing" secondItem="eVd-XG-vAO" secondAttribute="trailing" constant="16" id="dUu-ll-3wf"/>
+                                    <constraint firstItem="eVd-XG-vAO" firstAttribute="top" secondItem="bzV-So-u6l" secondAttribute="top" constant="20" id="kOs-hH-jTS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -65,8 +59,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="otq-7G-VlC" firstAttribute="width" secondItem="bzV-So-u6l" secondAttribute="width" id="6KO-wU-LLn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="otq-7G-VlC" secondAttribute="bottom" multiplier="1.2" id="BG9-tW-VFv"/>
-                            <constraint firstItem="otq-7G-VlC" firstAttribute="width" secondItem="Deu-zK-8dw" secondAttribute="width" id="FOg-yl-GCH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bzV-So-u6l" secondAttribute="trailing" constant="38" id="Nok-1Y-n8r"/>
                             <constraint firstItem="otq-7G-VlC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S3u-kS-ggA"/>
                             <constraint firstItem="bzV-So-u6l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="Uhe-9b-cnY"/>
@@ -75,7 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="animatedView" destination="bzV-So-u6l" id="9iC-W0-bPG"/>
-                        <outlet property="codeTextView" destination="Deu-zK-8dw" id="iz4-gw-qKC"/>
+                        <outlet property="animationPropertiesLabel" destination="eVd-XG-vAO" id="Dxu-Nb-Z4t"/>
                         <outlet property="startAnimationButton" destination="otq-7G-VlC" id="Pmg-P6-waK"/>
                     </connections>
                 </viewController>
